@@ -1,4 +1,8 @@
 <%- include("partials/header") %> 
 <h1><%= post.title %></h1>
 <p><%= post.content %></p>
+<form action="/del" method="post">
+    <input type="hidden" name="Delete" value=true>
+    <button class = "btn btn-outline-dark" type="submit" name="Title" value="<%= post.title %>">Delete</button>
+</form>
 <%- include("partials/footer") %>
